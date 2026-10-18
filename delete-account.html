@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your Awake account</title>
+<meta name="description" content="How to delete your Awake account and the data stored for it.">
+<style>
+  :root { --bg: #ffffff; --text: #16191a; --muted: #5b6366; --line: #d5dadb; --accent: #4d6b00; --field: #f3f5f4; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #090c0d; --text: #f3f5f0; --muted: #9aa1a4; --line: #2b3133; --accent: #c5f53c; --field: #14191a; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.5px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  .muted { color: var(--muted); }
+  ul, ol { padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  label { display: block; font-weight: 600; margin: 16px 0 6px; }
+  input, textarea { width: 100%; font: inherit; color: var(--text); background: var(--field); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  textarea { min-height: 90px; resize: vertical; }
+  button { margin-top: 18px; font: inherit; font-weight: 600; color: #111700; background: #c5f53c; border: 0; border-radius: 12px; padding: 12px 20px; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+<h1>Delete your Awake account</h1>
+<p class="muted">Awake, the alarm app, by its developer. Updated October 17, 2026.</p>
+
+<h2>In the app</h2>
+<ol>
+  <li>Open Awake and go to Settings › Account.</li>
+  <li>Tap Delete account, then hold the button to confirm.</li>
+</ol>
+<p>Your account and everything stored for it are deleted right away. Your alarms keep working on that phone as a guest.</p>
+
+<h2>Without the app</h2>
+<p>Send a request with the email of the Google account you signed in to Awake with. The account and its data are deleted within 30 days, and you get a reply when it's done.</p>
+<form action="https://formspree.io/f/xnpjlkjq" method="POST">
+  <input type="hidden" name="_subject" value="Awake account deletion request">
+  <label for="email">Google account email</label>
+  <input id="email" name="email" type="email" required autocomplete="email">
+  <label for="note">Anything else (optional)</label>
+  <textarea id="note" name="message"></textarea>
+  <button type="submit">Request deletion</button>
+</form>
+
+<h2>What is deleted</h2>
+<ul>
+  <li>Your sign-in: the Google account email and name Awake's sign-in service (Google Firebase) keeps.</li>
+  <li>Your leaderboard row: your display name and point totals.</li>
+  <li>Your backup: the alarms, settings, points, morning history, and sleep log backed up to your account.</li>
+</ul>
+<p>Nothing is kept after deletion. What Awake stores on your phone stays there until you delete the app.</p>
+
+<h2>Never signed in?</h2>
+<p>Then the only thing on Awake's servers is your leaderboard row, if you're on the leaderboard. Turn off Show me on the leaderboard in Settings › Progress &amp; leaderboard to delete it, or delete the app.</p>
+
+<p style="margin-top:32px"><a href="privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
