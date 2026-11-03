@@ -24,24 +24,26 @@
 <body>
 <main>
 <h1>Awake privacy policy</h1>
-<p class="muted">Effective October 27, 2026</p>
+<p class="muted">Effective November 2, 2026</p>
 
-<p>Awake is an alarm clock app for Android. This policy explains what Awake does with your information. The short version: Awake keeps your alarms and progress on your phone, sends the leaderboard only a display name and point totals, shows no ads, has no analytics or tracking, and sells nothing about you.</p>
+<p>Awake is an alarm clock app for Android. This policy explains what Awake does with your information. The short version: Awake keeps your alarms and progress on your phone, sends the leaderboard only a display name and point totals, sends Make Your Bed's camera frames only to have them checked, shares how mornings go without saying whose they are (you can turn that off), shows no ads, does no tracking, and sells nothing about you.</p>
 
 <h2>What stays on your phone</h2>
 <ul>
   <li>Your alarms, settings, wake tasks, points, achievements, and history.</li>
   <li>Your sleep log, bedtime, and sleep sound choices.</li>
-  <li>The QR code or NFC tag you save for Bathroom Scan, the places you save for Destination Check-in, and any task calibration.</li>
+  <li>The QR code or NFC tag you save for QR/Barcode, the photo you save for Photo Match, the items you save for Item Hunt, the places you save for Destination Check-in, and any task calibration.</li>
   <li>Sound files you choose for an alarm (Awake keeps its own copy on the phone).</li>
   <li><strong>Listen for snoring (off unless you turn it on).</strong> From Going to sleep until the night ends, the microphone listens on the phone. Awake keeps each minute's loudness, the minutes of snoring, and up to 10 short recordings of snoring a night. They stay on the phone, are never uploaded or backed up, and are deleted after 7 days; a night you cancel is deleted at once. Only the minutes of snoring stay with the sleep log.</li>
 </ul>
-<p>Camera frames, NFC tag reads, light levels, motion readings, and location checks are processed on the phone while a task is open and thrown away right after. Awake keeps only the result, such as "scanned" or "arrived". None of this is uploaded.</p>
+<p>Camera frames (except Make Your Bed's, below), NFC tag reads, light levels, motion readings, and location checks are processed on the phone while a task is open and thrown away right after. Awake keeps only the result, such as "scanned" or "arrived". None of this is uploaded.</p>
 
 <h2>What leaves your phone</h2>
 <ul>
   <li><strong>The leaderboard.</strong> If you're on the leaderboard (you can leave it in Settings › Progress &amp; leaderboard), Awake shows your display name and your weekly, monthly, and all-time point totals to other Awake users. The name is one Awake makes up for you, like "Calm Heron 42" (you can shuffle for another); it is never your real name. To keep your row, Awake gives your install an anonymous account with Google Firebase, which stores the row and an account ID.</li>
   <li><strong>Signing in (optional).</strong> If you sign in with Google, Firebase keeps your Google account's email address and name, and Awake backs up your alarms, settings, points, morning history, and sleep log to your account so they come back on another phone. Codes, tags, and places you save, and sound files you add, are not backed up.</li>
+  <li><strong>Make Your Bed.</strong> While this task's camera is open, Awake sends one small camera frame at a time (about one every second or two) through Awake's own server on Cloudflare to Anthropic's Claude, which says whether the bed in it is made. Awake's server keeps nothing. Anthropic doesn't use the frames to train its models and deletes them within 30 days (see <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>). So the server can tell the request comes from Awake, it carries a sign-in token for your install's anonymous Firebase account (the same kind the leaderboard uses), which Awake creates for this if you don't have one.</li>
+  <li><strong>Anonymous mornings (on unless you turn it off).</strong> To learn how Awake is used and make it better, when a real alarm's morning ends Awake sends a short record of it to Google Firebase: the wake task, its level and stages, the alarm's time and date, how long the task took, whether you snoozed, how many mistakes you made, whether you finished it, the Awake version, the language Awake is set to, and, after Read Aloud, whether speech was recognized by the downloaded model or by your phone's own recognizer. It carries a random ID made for this on your phone, so one phone's mornings can be read together, but no name, email, account ID, alarm label, place, photo, or advertising ID. Only the developer can read these records. Turn it off in Settings › Privacy &amp; data › Share anonymous mornings.</li>
   <li><strong>Morning weather (off unless you turn it on).</strong> To show today's forecast when your alarm turns off, and skies in the app that match your weather, Awake sends your rough location (rounded to about 1 km) to the Norwegian Meteorological Institute (MET Norway), which provides the forecast. See <a href="https://www.met.no/en/About-us/privacy">MET Norway's privacy policy</a>.</li>
   <li><strong>The map for a check-in place.</strong> When you pick a place on the map, the map's pictures come from OpenFreeMap, which sees which part of the map you're looking at (its <a href="https://openfreemap.org/privacy/">privacy policy</a> says its logs keep no IP addresses by default). Addresses you search, and the spot under the pin, are looked up by your phone's own address service (Google's, on most Android phones). The place you pick stays on your phone.</li>
   <li><strong>Speech models for Read Aloud.</strong> The first time Read Aloud may be needed, Awake downloads a speech model for your language from the Vosk project (alphacephei.com), so speech can be recognized on the phone. The download asks only for the model; no audio or other information about you is sent.</li>
@@ -53,11 +55,11 @@
 <h2>Permissions Awake asks for</h2>
 <ul>
   <li><strong>Alarms and reminders, notifications, and full-screen alarms:</strong> to ring at the exact time you set and open your wake task over the lock screen.</li>
-  <li><strong>Camera:</strong> only while you scan the code you saved for Bathroom Scan or a check-in.</li>
+  <li><strong>Camera:</strong> only while a camera task is open (QR/Barcode, a check-in, Photo Match, Item Hunt, Daylight, Make Your Bed) or while you save a code, photo, or item.</li>
   <li><strong>NFC:</strong> only to read the ID of the tag you saved.</li>
   <li><strong>Microphone:</strong> only if you turn on Listen for snoring, and only from Going to sleep until the night ends (a notification shows while it listens, with Stop); and while a Read Aloud task is open, to hear the phrase. Speech is recognized on the phone and never recorded or sent.</li>
   <li><strong>Location:</strong> only while you use Awake: to open the map on you when you pick a check-in place; after an alarm with a location check-in, while you head to the place, to check you in when you get there (a notification shows while it watches, and it stops when you arrive or the time passes); when you check in; and for Morning weather if you turn it on. Positions are compared with the saved place on the phone and never sent. Awake never asks for "Allow all the time" location access.</li>
-  <li><strong>Internet:</strong> for the leaderboard, sign-in and backup, morning weather, the map, purchases, and feedback.</li>
+  <li><strong>Internet:</strong> for the leaderboard, sign-in and backup, anonymous mornings, Make Your Bed's check, morning weather, the map, purchases, and feedback.</li>
   <li><strong>Run at startup and keep sound playing:</strong> to set your alarms again after the phone restarts, and to keep the alarm and sleep sounds playing.</li>
   <li><strong>Vibration:</strong> for alarms and haptic feedback.</li>
 </ul>
@@ -65,7 +67,7 @@
 
 <h2>What Awake does not do</h2>
 <ul>
-  <li>No ads, no advertising IDs, and no analytics or tracking tools.</li>
+  <li>No ads, no advertising IDs, and no third-party analytics or tracking tools.</li>
   <li>No selling or renting your information.</li>
   <li>No sharing of your information with anyone except the services named above, which handle it only to run Awake.</li>
 </ul>
@@ -74,7 +76,7 @@
 <p>Awake is not directed at children under 13 and doesn't knowingly collect information from them.</p>
 
 <h2>Keeping and deleting your information</h2>
-<p>What Awake keeps on your phone stays until you delete the app; you can export it from Settings › Privacy &amp; permissions › Export my data. Your leaderboard row is removed when you leave the leaderboard. To delete your account with everything stored for it (the leaderboard row, the backup, and the sign-in), use Settings › Account › Delete account, or follow <a href="delete-account.html">these steps</a> without the app. To have a feedback message you sent deleted, ask through Send feedback.</p>
+<p>What Awake keeps on your phone stays until you delete the app; you can export it from Settings › Privacy &amp; permissions › Export my data. Your leaderboard row is removed when you leave the leaderboard. To delete your account with everything stored for it (the leaderboard row, the backup, and the sign-in), use Settings › Account › Delete account, or follow <a href="delete-account.html">these steps</a> without the app. Anonymous morning records carry nothing that ties them to you, so they can't be picked out to delete; turning Share anonymous mornings off stops new ones. To have a feedback message you sent deleted, ask through Send feedback.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version is posted here with a new effective date, before the version of Awake it describes is released.</p>
